@@ -160,7 +160,7 @@ public class Controller {
     public void obrirFitxer(ActionEvent actionEvent) {
         primaStage = (Stage)mainPane.getScene().getWindow();
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
+        fileChooser.setTitle("Obrir Fitxer");
         file = fileChooser.showOpenDialog(primaStage);
         if (file != null) {
             try {
@@ -181,6 +181,16 @@ public class Controller {
     }
 
     public void guardarFitxer(ActionEvent actionEvent) {
+        guardar();
+    }
+
+    public void guardarComFitxer(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Guardar Fitxer");
+        file = fileChooser.showSaveDialog(primaStage);
+        guardar();
+    }
+    private void guardar(){
         try {
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
@@ -190,6 +200,5 @@ public class Controller {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

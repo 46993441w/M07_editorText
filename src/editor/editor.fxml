@@ -27,6 +27,7 @@
               <items>
                   <MenuItem fx:id="menuobrir" mnemonicParsing="false" onAction="#obrirFitxer" text="Obrir" />
                   <MenuItem fx:id="guardarfile" mnemonicParsing="false" onAction="#guardarFitxer" text="Guardar" />
+                  <MenuItem fx:id="guadarcomfile" mnemonicParsing="false" onAction="#guardarComFitxer" text="Guardar com ..." />
                   <MenuItem fx:id="sortir" mnemonicParsing="false" onAction="#tanca" text="Sortir" />
               </items>
             </Menu>
